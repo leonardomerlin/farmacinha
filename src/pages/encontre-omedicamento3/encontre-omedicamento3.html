@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Encontre o medicamento
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page9">
+  <form id="encontreOMedicamento3-form5">
+    <ion-searchbar placeholder="Tylenol" name="" id="encontreOMedicamento3-search4"></ion-searchbar>
+  </form>
+  <button id="encontreOMedicamento3-button8" ion-button color="positive" block>
+    Ler código de barras
+  </button>
+  <ion-card id="encontreOMedicamento3-card23">
+    <ion-list>
+      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+      </div>
+      <ion-item color="assertive" id="encontreOMedicamento3-list-item13">
+        <ion-icon name="alert" item-left></ion-icon>
+        Espere !
+        Esse medicamento é GRATUITO na Farmácia Popular
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <button id="encontreOMedicamento3-button10" ion-button color="positive" block on-click="goToFarmCiasPopulares()">
+    Me mostre as Fármacias Populares
+  </button>
+  <button id="encontreOMedicamento3-button9" ion-button color="stable" block on-click="goToEncontreOMedicamento4()">
+    Procure mesmo assim
+  </button>
+</ion-content>

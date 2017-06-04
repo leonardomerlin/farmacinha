@@ -1,16 +1,41 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { LeituraDeReceitasPage } from '../pages/leitura-de-receitas/leitura-de-receitas';
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { LoginPage } from '../pages/login/login';
+import { EncontreOMedicamentoPage } from '../pages/encontre-omedicamento/encontre-omedicamento';
+import { EncontreOMedicamento2Page } from '../pages/encontre-omedicamento2/encontre-omedicamento2';
+import { EncontreOMedicamento3Page } from '../pages/encontre-omedicamento3/encontre-omedicamento3';
+import { EncontreOMedicamento4Page } from '../pages/encontre-omedicamento4/encontre-omedicamento4';
+import { EncontreOMedicamento5Page } from '../pages/encontre-omedicamento5/encontre-omedicamento5';
+import { CaixaDeRemDiosPage } from '../pages/caixa-de-rem-dios/caixa-de-rem-dios';
+import { AlarmesPage } from '../pages/alarmes/alarmes';
+import { AlarmePage } from '../pages/alarme/alarme';
+import { CaixaDeRemDioPage } from '../pages/caixa-de-rem-dio/caixa-de-rem-dio';
+import { FarmCiasPopularesPage } from '../pages/farm-cias-populares/farm-cias-populares';
+
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    LeituraDeReceitasPage,
+    TabsControllerPage,
+    LoginPage,
+    EncontreOMedicamentoPage,
+    EncontreOMedicamento2Page,
+    EncontreOMedicamento3Page,
+    EncontreOMedicamento4Page,
+    EncontreOMedicamento5Page,
+    CaixaDeRemDiosPage,
+    AlarmesPage,
+    AlarmePage,
+    CaixaDeRemDioPage,
+    FarmCiasPopularesPage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +44,19 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    LeituraDeReceitasPage,
+    TabsControllerPage,
+    LoginPage,
+    EncontreOMedicamentoPage,
+    EncontreOMedicamento2Page,
+    EncontreOMedicamento3Page,
+    EncontreOMedicamento4Page,
+    EncontreOMedicamento5Page,
+    CaixaDeRemDiosPage,
+    AlarmesPage,
+    AlarmePage,
+    CaixaDeRemDioPage,
+    FarmCiasPopularesPage
   ],
   providers: [
     StatusBar,
