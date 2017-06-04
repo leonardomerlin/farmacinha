@@ -17,7 +17,7 @@ import { AlarmePage } from '../pages/alarme/alarme';
 import { ConquistasPage } from '../pages/conquistas/conquistas';
 import { CaixaDeRemDioPage } from '../pages/caixa-de-rem-dio/caixa-de-rem-dio';
 import { FarmCiasPopularesPage } from '../pages/farm-cias-populares/farm-cias-populares';
-
+import { HttpModule } from '@angular/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -45,7 +45,8 @@ import { IonicStorageModule } from '@ionic/storage';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

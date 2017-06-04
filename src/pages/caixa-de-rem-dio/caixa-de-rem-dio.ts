@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+// import { } from "../../pages/";
 
 @Component({
   selector: 'page-caixa-de-rem-dio',
@@ -9,5 +10,8 @@ export class CaixaDeRemDioPage {
 
   constructor(public navCtrl: NavController) {
   }
-  
+
+  openBarCode() {
+    // this.navCtrl.setRoot();
+  }
 }
