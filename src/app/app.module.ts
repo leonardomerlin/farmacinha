@@ -14,6 +14,7 @@ import { EncontreOMedicamento5Page } from '../pages/encontre-omedicamento5/encon
 import { CaixaDeRemDiosPage } from '../pages/caixa-de-rem-dios/caixa-de-rem-dios';
 import { AlarmesPage } from '../pages/alarmes/alarmes';
 import { AlarmePage } from '../pages/alarme/alarme';
+import { ConquistasPage } from '../pages/conquistas/conquistas';
 import { CaixaDeRemDioPage } from '../pages/caixa-de-rem-dio/caixa-de-rem-dio';
 import { FarmCiasPopularesPage } from '../pages/farm-cias-populares/farm-cias-populares';
 
@@ -37,6 +38,7 @@ import { IonicStorageModule } from '@ionic/storage';
     CaixaDeRemDiosPage,
     AlarmesPage,
     AlarmePage,
+    ConquistasPage,
     CaixaDeRemDioPage,
     FarmCiasPopularesPage
   ],
@@ -60,6 +62,7 @@ import { IonicStorageModule } from '@ionic/storage';
     CaixaDeRemDiosPage,
     AlarmesPage,
     AlarmePage,
+    ConquistasPage,
     CaixaDeRemDioPage,
     FarmCiasPopularesPage
   ],

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
+import { Http } from '@angular/http';
 import { LeituraDeReceitasPage } from '../leitura-de-receitas/leitura-de-receitas';
-import { EncontreOMedicamento2Page } from '../encontre-omedicamento2/encontre-omedicamento2';
+// import { EncontreOMedicamento2Page } from '../encontre-omedicamento2/encontre-omedicamento2';
 
 @Component({
   selector: 'page-encontre-omedicamento',
@@ -11,8 +12,10 @@ export class EncontreOMedicamentoPage {
 
   query = '';
   resultList = null;
+  selectedSegment: any;
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public http: Http) {
+    this.selectedSegment = 'por-principio-ativo';
   }
 
   goToLeituraDeReceitas(params) {
@@ -32,11 +35,14 @@ export class EncontreOMedicamentoPage {
     loading.present();
 
     loading.onDidDismiss(() => {
-      this.resultList = [{
-        name: 'teste'
-      }];
+      this.getData().subscribe((data) => {
+        this.resultList = data;
+      })
       // this.navCtrl.push(EncontreOMedicamento2Page, params);
     });
+  }
+
+  goToDetails(item) {
   }
 
   doRefresh(refresher) {
@@ -46,5 +52,9 @@ export class EncontreOMedicamentoPage {
       console.log('Async operation has ended');
       refresher.complete();
     }, 2000);
+  }
+
+  getData() {
+    return this.http.get('assets/data/remedions.json');
   }
 }

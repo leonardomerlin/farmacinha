@@ -14,21 +14,25 @@
       Juquinha
     </p>
     <ion-list inset id="menu-list6">
-      <ion-item menuClose="" (click)="goToEncontreOMedicamento()">
-        Pesquisar
-      </ion-item>
-      <ion-item menuClose="" (click)="goToCaixaDeRemDios()">
-        Caixa de Remédios
-      </ion-item>
-      <ion-item menuClose="" (click)="goToAlarmes()">
+      <button ion-item menuClose="" (click)="goToAlarmes()">
         Alarmes
-      </ion-item>
-      <ion-item menuClose="" (click)="goToLogin()">
-        MInha Família
-      </ion-item>
-      <ion-item menuClose="" (click)="logout()">
+        <ion-badge item-right>2</ion-badge>
+      </button>
+      <button ion-item menuClose="" (click)="goToConquistas()">
+        Conquistas
+      </button>
+      <button ion-item menuClose="" (click)="goToLogin()">
+        Minha Família
+      </button>
+      <button ion-item menuClose="" (click)="goToEncontreOMedicamento()">
+        Pesquisar
+      </button>
+      <button ion-item menuClose="" (click)="goToCaixaDeRemDios()">
+        Remédios
+      </button>
+      <button ion-item menuClose="" (click)="logout()">
         Sair
-      </ion-item>
+      </button>
     </ion-list>
   </ion-content>
 </ion-menu>

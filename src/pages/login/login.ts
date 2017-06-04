@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { EncontreOMedicamentoPage } from '../../pages/encontre-omedicamento/encontre-omedicamento';
 
 @Component({
@@ -10,11 +10,19 @@ export class LoginPage {
   email = 'eu-amo@minhafarmacinha.com.br';
   senha = '1234';
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private loadingCtrl: LoadingController) {
   }
 
   openHome() {
-    this.navCtrl.setRoot(EncontreOMedicamentoPage);
+    let loading = this.loadingCtrl.create({
+      content: 'Autenticando...',
+      duration: 1000
+    });
+    loading.present();
+
+    loading.onDidDismiss(() => {
+      this.navCtrl.setRoot(EncontreOMedicamentoPage);
+    });
   }
 
   openSignup() {

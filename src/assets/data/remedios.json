@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Tylenol 750mg",
+        "name": "Tylenol",
         "active_principle": "Paracetamol",
         "description": "O TYLENOL® 750mg é indicado para o alívio temporário da dor de leve a moderada, como aquelas associadas a gripes, resfriados, artrites e cólicas, e para a redução da febre.",
         "composition": "Ingrediente Ativo: 750mg de paracetamol por comprimido. Excipientes: ácido esteárico, água purifi cada, amido pré-gelatinizado, hipromelose, macrogol e povidona.",
@@ -88,12 +88,12 @@
                 "address": "R. Cuiabá, 2925",
                 "url_site": ""
 
-            }           
+            }
         ]
     },
     {
         "id": 3,
-        "name": "CIMELIDE® - 100mg 12 comp",
+        "name": "CIMELIDE®",
         "active_principle": "Nimesulida 100 mg",
         "description": "CIMELIDE é indicado em todas as doenças que requerem atividade antiinflamatória, analgésica ou antipirética. No tratamento de estados flogísticos dolorosos e não-dolorosos acompanhados ou não por febre, inclusive os relacionados ao aparelho ostearticular.",
         "composition": "Cada comprimido contém:nimesulida 100 mg. Cada ml de suspensão oral gotas contém:nimesulida 50 mg",
@@ -125,7 +125,7 @@
                 "address": "Av. Brasil, 7528",
                 "url_site": ""
 
-            }            
+            }
         ]
     },
     {
@@ -133,7 +133,7 @@
         "name": "Naldecon Dia",
         "active_principle": "Paracetamol",
         "description": "As ações farmacológicas das substâncias que formam o produto, prestam uma cobertura sintomática ampla no tratamento de gripes e resfriados, cuja ação farmacodinâmica e segurança são perfeitamente conhecidas e bem estabelecidas. O paracetamol possui atividade analgésica e antitérmica.",
-        "composition": "Cada comprimido amarelo contém: 400 mg de paracetamol e 20 mg de cloridrato de fenilefrina. Cada comprimido branco contém: 400 mg de paracetamol. Ingredientes inativos: celulose microcristalina, amido pregelatinizado, corante D&C amarelonº 10, estearato de magnésio, polivinilpirrolidona, amido de milho e água purificada.", 
+        "composition": "Cada comprimido amarelo contém: 400 mg de paracetamol e 20 mg de cloridrato de fenilefrina. Cada comprimido branco contém: 400 mg de paracetamol. Ingredientes inativos: celulose microcristalina, amido pregelatinizado, corante D&C amarelonº 10, estearato de magnésio, polivinilpirrolidona, amido de milho e água purificada.",
         "image_url": "http://www.farmabemfarmacia.com.br/assets/images/produtos/700/4175.jpg",
         "codebar": "7896016805875",
         "players": [
@@ -144,7 +144,7 @@
                 "promotion": "",
                 "address": "R. Visc. de Guarapuava, 2113",
                 "url_site": "https://www.drogariasnissei.com.br/naldecon-dia-24-comprimidos/97462-01"
-            }          
+            }
         ]
     }
 ]

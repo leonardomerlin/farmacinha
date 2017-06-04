@@ -14,11 +14,9 @@ import { EncontreOMedicamento2Page } from '../pages/encontre-omedicamento2/encon
 import { AlarmesPage } from '../pages/alarmes/alarmes';
 import { AlarmePage } from '../pages/alarme/alarme';
 
-
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-
-
+import { ConquistasPage } from '../pages/conquistas/conquistas';
 
 @Component({
   templateUrl: 'app.html'
@@ -81,6 +79,10 @@ export class MyApp {
   goToAlarme(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(AlarmePage);
+  }
+  goToConquistas(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(ConquistasPage);
   }
   logout() {
     this.navCtrl.setRoot(LoginPage);
