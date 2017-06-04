@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LeituraDeReceitasPage } from '../pages/leitura-de-receitas/leitura-de-receitas';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { EncontreOMedicamentoPage } from '../pages/encontre-omedicamento/encontre-omedicamento';
 import { EncontreOMedicamento2Page } from '../pages/encontre-omedicamento2/encontre-omedicamento2';
@@ -19,12 +20,14 @@ import { FarmCiasPopularesPage } from '../pages/farm-cias-populares/farm-cias-po
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
     MyApp,
     LeituraDeReceitasPage,
     TabsControllerPage,
+    HomePage,
     LoginPage,
     EncontreOMedicamentoPage,
     EncontreOMedicamento2Page,
@@ -39,13 +42,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LeituraDeReceitasPage,
     TabsControllerPage,
+    HomePage,
     LoginPage,
     EncontreOMedicamentoPage,
     EncontreOMedicamento2Page,

@@ -1,34 +1,32 @@
 <ion-menu [content]="mainContent">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-title>
         Menu
       </ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content id="side-menu21">
-    <div>
+    <div padding>
       <img src="assets/img/1uDYfjGSSEC2TzSzE5l6_3.png" style="display:block;width:80px;height:1;margin-left:auto;margin-right:auto;" />
     </div>
-    <div id="menu-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">
-        Max
-      </p>
-    </div>
-    <ion-list id="menu-list6">
-      <ion-item color="none" menuClose="" on-click="goToEncontreOMedicamento()" id="menu-list-item9">
+    <p text-center>
+      Juquinha
+    </p>
+    <ion-list inset id="menu-list6">
+      <ion-item menuClose="" (click)="goToEncontreOMedicamento()">
         Pesquisar
       </ion-item>
-      <ion-item color="none" menuClose="" on-click="goToCaixaDeRemDios()" id="menu-list-item10">
+      <ion-item menuClose="" (click)="goToCaixaDeRemDios()">
         Caixa de Remédios
       </ion-item>
-      <ion-item color="none" menuClose="" on-click="goToAlarmes()" id="menu-list-item11">
+      <ion-item menuClose="" (click)="goToAlarmes()">
         Alarmes
       </ion-item>
-      <ion-item color="none" menuClose="" on-click="goToLogin()" id="menu-list-item15">
+      <ion-item menuClose="" (click)="goToLogin()">
         MInha Família
       </ion-item>
-      <ion-item color="none" menuClose="" on-click="goToLogin()" id="menu-list-item14">
+      <ion-item menuClose="" (click)="logout()">
         Sair
       </ion-item>
     </ion-list>

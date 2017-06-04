@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { LeituraDeReceitasPage } from '../leitura-de-receitas/leitura-de-receitas';
-import {  } from '../encontre-omedicamento4/encontre-omedicamento4';
-import {  } from '../encontre-omedicamento5/encontre-omedicamento5';
-import { EncontreOMedicamento4Page } from '../encontre-omedicamento4/encontre-omedicamento4';
-import { EncontreOMedicamento5Page } from '../encontre-omedicamento5/encontre-omedicamento5';
 import { EncontreOMedicamento2Page } from '../encontre-omedicamento2/encontre-omedicamento2';
 
 @Component({
@@ -13,19 +9,42 @@ import { EncontreOMedicamento2Page } from '../encontre-omedicamento2/encontre-om
 })
 export class EncontreOMedicamentoPage {
 
-  constructor(public navCtrl: NavController) {
+  query = '';
+  resultList = null;
+
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
   }
-  goToLeituraDeReceitas(params){
+
+  goToLeituraDeReceitas(params) {
     if (!params) params = {};
-    this.navCtrl.push(LeituraDeReceitasPage);
-  }goToEncontreOMedicamento4(params){
+    this.navCtrl.push(LeituraDeReceitasPage, params);
+  }
+
+  goToResultados(params) {
     if (!params) params = {};
-    this.navCtrl.push(EncontreOMedicamento4Page);
-  }goToEncontreOMedicamento5(params){
-    if (!params) params = {};
-    this.navCtrl.push(EncontreOMedicamento5Page);
-  }goToEncontreOMedicamento2(params){
-    if (!params) params = {};
-    this.navCtrl.push(EncontreOMedicamento2Page);
+
+    console.log('Loading');
+    let loading = this.loadingCtrl.create({
+      content: 'Procurando. Aguarde...',
+      duration: 1000
+    });
+
+    loading.present();
+
+    loading.onDidDismiss(() => {
+      this.resultList = [{
+        name: 'teste'
+      }];
+      // this.navCtrl.push(EncontreOMedicamento2Page, params);
+    });
+  }
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
   }
 }

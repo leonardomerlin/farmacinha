@@ -1,14 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="home-page">
+  <ion-slides pager>
+    <ion-slide>
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="primary" (click)="goLogin()">Pular</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-icon icon="bell"></ion-icon>
+      <h2 class="slide-title">Economize!</h2>
+      <p>Nós te ajudamos a lembrar se você já um remédio com o mesmo <b>Princípio Ativo</b> em casa.</p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+      <h2 class="slide-title">Vamos lá!?</h2>
+      <button ion-button large clear icon-right color="primary" (click)="goLogin()">
+        Começar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

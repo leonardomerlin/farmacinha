@@ -1,35 +1,35 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+  <ion-navbar color="primary">
     <ion-title>
-      Login
+      Identifique-se
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page5">
   <form id="login-form1">
-    <ion-list id="login-list1">
+    <ion-list inset id="login-list1">
       <ion-item id="login-input1">
         <ion-label>
-          Email
+          E-mail
         </ion-label>
-        <ion-input type="email" placeholder=""></ion-input>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
       </ion-item>
       <ion-item id="login-input2">
         <ion-label>
-          Password
+          Senha
         </ion-label>
-        <ion-input type="password" placeholder=""></ion-input>
+        <ion-input type="password" [(ngModel)]="senha" name="senha" required></ion-input>
       </ion-item>
     </ion-list>
-    <div class="spacer" style="height:40px;" id="login-spacer1"></div>
-    <button id="login-button2" ion-button color="stable" block href-inappbrowser="/page1">
-      Entrar
-    </button>
-    <button id="login-button3" ion-button clear color="positive" block href-inappbrowser="/signup">
-      Ou criar nova conta
-    </button>
+    <p>
+      <button id="login-button2" ion-button color="stable" block [disabled]="!(email && senha)" (click)="openHome()">
+        Entrar
+      </button>
+    </p>
+    <p>
+      <button id="login-button3" ion-button clear color="positive" block (click)="openSignup()">
+        Ou crie uma conta
+      </button>
+    </p>
   </form>
 </ion-content>

@@ -1,21 +1,33 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
       Encontre o medicamento
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToLeituraDeReceitas()">
+        <ion-icon name="barcode"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page6">
+<ion-content id="page6">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Puxe para atualizar" refreshingSpinner="circles" refreshingText="Atualizando..."></ion-refresher-content>
+  </ion-refresher>
   <form id="encontreOMedicamento-form2">
-    <ion-searchbar placeholder="Qual o medicamento" name="" id="encontreOMedicamento-search1"></ion-searchbar>
-    <button id="encontreOMedicamento-button11" ion-button color="positive" block on-click="goToEncontreOMedicamento2()">
+    <ion-searchbar placeholder="Qual o medicamento" name="query" [(ngModel)]="query" id="encontreOMedicamento-search1"></ion-searchbar>
+    <button id="encontreOMedicamento-button11" ion-button block color="positive" [disabled]="!query" (click)="goToResultados({query: query})">
       Buscar
     </button>
-    <button id="encontreOMedicamento-button6" ion-button color="light" block on-click="goToLeituraDeReceitas()">
-      Ler código de barras
-    </button>
   </form>
+  <div *ngIf="resultList">
+    <ion-list>
+      <ion-item *ngFor="let item of resultList">
+        {{ item.name }}
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

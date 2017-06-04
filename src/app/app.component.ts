@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Storage } from '@ionic/storage';
 
 import { CaixaDeRemDiosPage } from '../pages/caixa-de-rem-dios/caixa-de-rem-dios';
 import { CaixaDeRemDioPage } from '../pages/caixa-de-rem-dio/caixa-de-rem-dio';
@@ -14,6 +15,7 @@ import { AlarmesPage } from '../pages/alarmes/alarmes';
 import { AlarmePage } from '../pages/alarme/alarme';
 
 
+import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 
 
@@ -23,9 +25,16 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = LoginPage;
+  rootPage: any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private storage: Storage) {
+
+    this.storage.get('skip-intro').then(val => {
+      if (val === true) {
+        this.rootPage = LoginPage;
+      }
+    });
+
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -33,35 +42,47 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-  goToCaixaDeRemDios(params){
+  goToCaixaDeRemDios(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(CaixaDeRemDiosPage);
-  }goToCaixaDeRemDio(params){
+  }
+  goToCaixaDeRemDio(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(CaixaDeRemDioPage);
-  }goToEncontreOMedicamento(params){
+  }
+  goToEncontreOMedicamento(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(EncontreOMedicamentoPage);
-  }goToLeituraDeReceitas(params){
+  }
+  goToLeituraDeReceitas(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(LeituraDeReceitasPage);
-  }goToEncontreOMedicamento4(params){
+  }
+  goToEncontreOMedicamento4(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(EncontreOMedicamento4Page);
-  }goToEncontreOMedicamento5(params){
+  }
+  goToEncontreOMedicamento5(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(EncontreOMedicamento5Page);
-  }goToEncontreOMedicamento2(params){
+  }
+  goToEncontreOMedicamento2(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(EncontreOMedicamento2Page);
-  }goToLogin(params){
+  }
+  goToLogin(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(LoginPage);
-  }goToAlarmes(params){
+  }
+  goToAlarmes(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(AlarmesPage);
-  }goToAlarme(params){
+  }
+  goToAlarme(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(AlarmePage);
+  }
+  logout() {
+    this.navCtrl.setRoot(LoginPage);
   }
 }
