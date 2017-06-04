@@ -87,4 +87,8 @@ export class MyApp {
   logout() {
     this.navCtrl.setRoot(LoginPage);
   }
+  goToIntro(){
+    this.storage.set('skip-intro', false);
+    this.navCtrl.setRoot(HomePage);
+  }
 }
